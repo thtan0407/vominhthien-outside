@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <title>Võ Minh Thiên Co.,Ltd</title>
+    <link rel="icon" href="images/VMT-icon.png" type="image/x-icon" sizes="50x40">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/wowjs/animate.css">
+    <link rel="stylesheet" href="css/style.css" media="all">
+</head>
+
+<body>
+
+    <main>
+        <section class="sec-loginout">
+            <div class="container">
+                <div class="row header-loginout d-flex justify-content-between align-items-center">
+                    <div class="col-6">
+                        <a href="#" title="Võ Minh Thiên Co.,Ltd">
+                            <img src="images/VMT-logo.svg" alt="Logo Võ Minh Thiên">
+                        </a>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <button class="btn-close" type="button"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-12 text-center">
+                        <h2 class="title-cabin-01">Nhập mật khẩu mới</h2>
+                        <p>Bạn chưa có tài khoản ? <a href="#">Đăng ký ngay</a></p>
+                    </div>
+                    <div class="col-md-6 col-xl-4 text-center">
+                        <form action="" class="form-template mb-140">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Mật khẩu mới" aria-label="Password" required>
+                            </div>
+                            <div class="input-group last-element">
+                                <input type="text" class="form-control" placeholder="Nhập lại để xác minh" aria-label="RePassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-green btn-icon" data-bs-toggle="modal" data-bs-target="#popupChangePassword">Đổi mật khẩu</button>
+                        </form>
+                        <p>Bằng việc đăng nhập, bạn đã đồng ý với <a href="#">Điều khoản sử dụng</a></p>
+                    </div>
+                </div>
+            </div>
+        </section> <!--end sec-loginout-->
+        
+    </main>
+
+    <section class="sec-modal">
+        <div class="modal modal-change-password fade" id="popupChangePassword" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content pt-5 pb-5">
+                    <div class="modal-header">
+                        <h2 class="title-lato-03 m-auto text-center" id="changePasswordModalLabel">Đổi mật khẩu thành công!</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center">Chúng tôi cũng gửi thông báo về Email liên kết, hãy báo cáo nếu không phải bạn thực hiện</p>
+                    </div>
+                    <div class="modal-footer m-auto">
+                        <button type="button" class="btn btn-green timer" data-bs-dismiss="modal">Tới Dashboard ngay (<span>5</span> giây)</button>
+                    </div>
+                </div>
+            </div>
+        </div> <!--end Footer modal-register-->
+    </section>
+
+
+    <script src="vendor/jquery-3.6.0.min.js"></script>
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendor/wowjs/wow.min.js"></script>
+    <script type="text/javascript" src="js/function.js"></script>
+</body>
+</html>
