@@ -188,6 +188,10 @@ ul, ol {
 	color: #1a8917;
 }
 
+.text-green_black {
+	color: #076007;
+}
+
 .text-orange {
 	color: #FF993E;
 }
@@ -2098,7 +2102,7 @@ header {
 
 /*---style sec-visao---*/
 .sec-visao {
-	background-color: #f2f2f2;
+	background-color: var(--bs-white);
 	padding-top: 90px;
 	padding-bottom: 42px
 }
@@ -2109,11 +2113,7 @@ header {
 	justify-content: center;
 	margin-top: 50px;
 	margin-bottom: 70px;
-	color: #fff;
-	background-color: #076007;
-	background-image: url(../images/background-wave-small.png);
-	background-size: cover;
-	background-position: center center;
+	color: #076007;
 	border-radius: 20px;
 }
 
@@ -2127,17 +2127,6 @@ header {
 	.tieuchi-wrap .block-item {
 		width: calc(100% / 2);
 	}
-}
-
-.tieuchi-wrap .block-item + .block-item:before {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	height: 50%;
-	width: 1px;
-	background-color: #fff;
 }
 
 @media screen and (max-width: 992px) {
@@ -4501,12 +4490,12 @@ ul.footer-menu li:hover a {
 }
 
 #btn-backtotop {
-	bottom: 80px;
+	bottom: 95px;
 	right: 25px;
 }
 
 .sec-lienhe {
-	padding-top: 70px;
+	padding-top: 100px;
 	padding-bottom: 50px;
 }
 
@@ -4556,4 +4545,18 @@ ul.footer-menu li:hover a {
 
 .lienhe-form .form-item .form-control:not(:placeholder-shown) {
 	border-bottom-color: #076007;
+}
+
+.chatbox-floating {
+	position: fixed;
+	right: 25px;
+	bottom: 150px;
+	z-index: 10;
+}
+.row-gallery {
+	border-radius: 24px;
+	overflow: hidden;
+}
+.row-gallery .img-gallery {
+	width: 100%;
 }
