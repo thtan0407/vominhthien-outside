@@ -1513,10 +1513,7 @@ header {
 
 /*---style sec-banner---*/
 .sec-banner {
-	padding-top: 67px;
-	background-image: url(../images/background-wave-01.png);
-	background-position: bottom;
-	background-size: cover;
+	padding: 80px 0 120px;
 }
 
 .sec-banner h1.title-lato-01 {
@@ -1524,9 +1521,9 @@ header {
 }
 
 .sec-banner .btn-start {
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 135%;
-	padding: 15px 70px;
+	padding: 15px 60px;
 	margin-top: 28px;
 	margin-bottom: 38px;
 }
@@ -4550,4 +4547,71 @@ ul.footer-menu li:hover a {
 
 .section-partner .swiper-slide img.swiper-opacity {
 	opacity: .2;
+}
+
+.polygon-wrapper {
+	position: relative;
+	flex-grow: 1;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 10px;
+}
+
+.polygon-wrapper .polygon-item {
+	grid-column: span 2;
+	z-index: 1;
+	margin-bottom: -30%;
+}
+
+.polygon-wrapper .polygon-item:nth-child(5n + 1) {
+	grid-column: 2/span 2;
+}
+
+.polygon-wrapper .polygon-item img {
+	opacity: 1;
+	transition: opacity 0.2s;
+}
+
+.polygon-wrapper:hover .polygon-item:not(:nth-child(1)) img {
+	opacity: 0;
+}
+
+.polygon-wrapper:hover .polygon-item:not(:nth-child(1)) img {
+	animation: effectFade .2s linear forwards;
+}
+
+.polygon-wrapper:hover .polygon-item:nth-child(2) img {
+	animation-delay: .15s;
+}
+
+.polygon-wrapper:hover .polygon-item:nth-child(5) img {
+	animation-delay: .3s;
+}
+
+.polygon-wrapper:hover .polygon-item:nth-child(7) img {
+	animation-delay: .45s;
+}
+
+.polygon-wrapper:hover .polygon-item:nth-child(6) img {
+	animation-delay: .6s;
+}
+
+.polygon-wrapper:hover .polygon-item:nth-child(3) img {
+	animation-delay: .75s;
+}
+
+.polygon-wrapper:hover .polygon-item:nth-child(4) img {
+	animation-delay: .9s;
+}
+
+@keyframes effectFade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
