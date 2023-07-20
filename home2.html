@@ -23,6 +23,39 @@
 </head>
 
 <body>
+
+<div class="modal fade modal-theme" id="modal-theme" data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content bg-transparent border-0 shadow-none rounded-0">
+			<div class="modal-body p-0 m-0">
+				<div class="position-relative d-inline-block modal-theme_content">
+					<button type="button" class="modal-theme_button text-white p-0 bg-transparent"
+							data-bs-dismiss="modal">
+						<i class="icon-cross"></i>
+					</button>
+					<a href="" class="d-inline-block align-middle">
+						<img src="https://lh3.googleusercontent.com/cUvrwrCamrzx6BEF8qFEbCQDtvRdZQozIdorqLE4BkQEukls9aRxRr2tgul6qelerG6DX460qnAT7WG3EpfFeJngZDE6KciS=rw"
+							 class="img-fluid"
+							 alt="">
+					</a>
+					<!--
+					<iframe width="1200" height="400" src="https://www.youtube.com/embed/"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+					<video class="img-fluid">
+						<source src="https://learn.shayhowe.com/assets/misc/courses/html-css/adding-media/earth.ogv"
+								type="video/ogg">
+						<source src="https://learn.shayhowe.com/assets/misc/courses/html-css/adding-media/earth.mp4"
+								type="video/mp4">
+					</video>
+					-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <header class="sticky-top">
 	<div class="header-main d-flex align-items-center">
 		<div class="container-fluid">
@@ -253,7 +286,7 @@
 	<section class="sec-news-update">
 		<div class="container">
 			<div class="row d-flex justify-content-center">
-				<div class="col-11 col-post-news">
+				<div class="col-11 col-post-news" id="list-post-news">
 					<div class="swiper list-post-news">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
@@ -359,7 +392,7 @@
 								<a href="#"><img src="images/download-app-store.svg" alt=""></a>
 							</div>
 						</div>
-						<div class="">
+						<div class="text-center text-md-start">
 							<a href="#" class="btn btn-gradient btn-icon hidden-icon btn-start wow bounceInUp m-0"
 							   data-wow-delay=".9s">BẮT ĐẦU NGAY
 							</a>
@@ -459,7 +492,7 @@
 		<div class="container">
 			<div class="quanly-item">
 				<div class="row d-flex justify-content-between align-items-center">
-					<div class="col-md-6 order-1 order-md-0 col-extention wow bounceInLeft">
+					<div class="col-md-6 order-1 order-md-0 col-extention wow bounceInLeft mt-4 mt-md-0">
 						<img src="images/extention-group.png" alt="" class="img-fluid">
 					</div>
 					<div class="col-md-6 col-lg-5 order-0 order-md-1 col-easy-buy wow bounceInRight">
@@ -470,7 +503,8 @@
 						   đáo
 						   chỉ có ở Trung Quốc? Tìm hiểu ngay 5 bước đặt hàng đơn giản cùng VMT nhé
 						</p>
-						<a href="#" class="btn btn-gradient btn-icon btn-hulk">Tìm hiểu thêm</a>
+						<div class="text-center text-md-start">
+							<a href="#" class="btn btn-gradient btn-icon btn-hulk">Tìm hiểu thêm</a></div>
 					</div>
 				</div>
 			</div>
@@ -511,7 +545,7 @@
 								   các vấn đề gặp phải trong quá trình đặt hàng.
 								</p>
 							</div>
-							<div class="col-12">
+							<div class="col-12 text-center text-md-start">
 								<a href="#" class="btn btn-gradient btn-icon btn-hulk">Đến Dashboard</a>
 							</div>
 						</div>
@@ -1413,7 +1447,7 @@
 									giải đáp các vấn đề gặp phải trong quá trình đặt hàng.
 								</p>
 							</div>
-							<div class="col-12">
+							<div class="col-12 text-center text-md-start">
 								<a href="#" class="btn btn-gradient btn-icon btn-hulk">Khách hàng nói gì về chúng
 																					   tôi?</a>
 							</div>
@@ -1950,13 +1984,13 @@
 <script type="text/javascript" src="js/function.js"></script>
 
 <script>
-	var swiperPostNew = new Swiper(".list-post-news", {
+	var swiperPostNew = new Swiper("#list-post-news .swiper", {
 		slidesPerView: 2,
 		spaceBetween: 30,
 		loop: true,
 		navigation: {
-			nextEl: ".list-post-news .swiper-button-next",
-			prevEl: ".list-post-news .swiper-button-prev",
+			nextEl: "#list-post-news .swiper-button-next",
+			prevEl: "#list-post-news .swiper-button-prev",
 		},
 		breakpoints: {
 			768: {
@@ -2038,6 +2072,10 @@
 			}
 		}
 	});
+
+	setTimeout(function () {
+		$("#modal-theme").modal('show')
+	}, 300)
 
 </script>
 </body>
