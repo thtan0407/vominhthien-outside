@@ -4848,3 +4848,22 @@ ul.footer-menu li:hover a {
 		max-height: 70%;
 	}
 }
+
+@media screen and (min-width: 1200px) and (max-width: 1470px) {
+	.header-nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		white-space: nowrap;
+	}
+
+	.btn-users {
+		justify-content: flex-end;
+	}
+
+	.btn-users .btn {
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: .825em;
+	}
+}
